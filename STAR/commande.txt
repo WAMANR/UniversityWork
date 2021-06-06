@@ -1,0 +1,1 @@
+Pour lancer le programme cmd : python ou python3 BonnerotRouichi.py
