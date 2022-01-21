@@ -1,0 +1,866 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_height="match_parent"
+    android:layout_width="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+   <FrameLayout
+       android:layout_width="match_parent"
+       android:layout_height="@dimen/_70sdp"
+       android:background="@drawable/background_corner_bottom">
+
+      <androidx.appcompat.widget.AppCompatImageView
+          android:id="@+id/ic_logout"
+          android:layout_width="@dimen/_40sdp"
+          android:layout_height="@dimen/_70sdp"
+          android:layout_marginLeft="@dimen/_18sdp"
+          android:src="@drawable/ic_logout"
+          android:visibility="visible">
+      </androidx.appcompat.widget.AppCompatImageView>
+
+      <androidx.appcompat.widget.AppCompatImageView
+          android:id="@+id/ic_back"
+          android:layout_width="@dimen/_40sdp"
+          android:layout_height="@dimen/_70sdp"
+          android:layout_marginLeft="@dimen/_18sdp"
+          android:src="@drawable/ic_back"
+          android:visibility="invisible">
+      </androidx.appcompat.widget.AppCompatImageView>
+
+      <TextView
+          android:id="@+id/textProfile"
+          android:layout_width="match_parent"
+          android:layout_height="@dimen/_70sdp"
+          android:text="@string/profile"
+          android:textColor="@color/white"
+          android:textSize="@dimen/_30sdp"
+          android:gravity="center">
+      </TextView>
+
+      <androidx.appcompat.widget.AppCompatImageView
+          android:id="@+id/ic_scanner"
+          android:layout_width="@dimen/_40sdp"
+          android:layout_height="@dimen/_70sdp"
+          android:layout_gravity="right"
+          android:layout_marginRight="@dimen/_18sdp"
+          android:src="@drawable/ic_scanner"
+          android:visibility="visible">
+      </androidx.appcompat.widget.AppCompatImageView>
+
+      <androidx.appcompat.widget.AppCompatImageView
+          android:id="@+id/ic_share"
+          android:layout_width="@dimen/_40sdp"
+          android:layout_height="@dimen/_70sdp"
+          android:layout_gravity="right"
+          android:layout_marginRight="@dimen/_18sdp"
+          android:src="@drawable/ic_share"
+          android:visibility="invisible">
+      </androidx.appcompat.widget.AppCompatImageView>
+
+   </FrameLayout>
+
+   <FrameLayout
+       android:layout_width="match_parent"
+       android:layout_height="match_parent"
+       android:visibility="invisible">
+
+
+
+   </FrameLayout>
+
+   <FrameLayout
+       android:layout_width="match_parent"
+       android:layout_height="match_parent">
+
+      <ImageView
+          android:id="@+id/qrCodeDisplay"
+          android:layout_width="@dimen/_250sdp"
+          android:layout_height="@dimen/_250sdp"
+          android:layout_gravity="center"
+          android:adjustViewBounds="true"
+          android:visibility="invisible">
+      </ImageView>
+
+   </FrameLayout>
+
+
+
+   <ScrollView
+       android:id="@+id/profileScrollView"
+       android:layout_width="match_parent"
+       android:layout_height="match_parent"
+       android:layout_marginTop="@dimen/_70sdp"
+       android:overScrollMode="always"
+       android:scrollbars="none"
+       android:visibility="visible">
+
+
+      <androidx.constraintlayout.widget.ConstraintLayout
+          android:layout_width="match_parent"
+          android:layout_height="wrap_content">
+
+         <LinearLayout
+             android:id="@+id/roleLayout"
+             android:layout_width="match_parent"
+             android:layout_height="wrap_content"
+             android:orientation="horizontal"
+             app:layout_constraintTop_toTopOf="parent">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:gravity="center"
+                android:text=" Supervisory staff "
+                android:textSize="@dimen/_14ssp"
+                android:textColor="@color/primary_text">
+            </TextView>
+
+            <CheckBox
+                android:id="@+id/checkboxSupervisory"
+                android:layout_width="wrap_content"
+                android:layout_height="@dimen/_40sdp"
+                android:layout_marginLeft="@dimen/_5sdp">
+            </CheckBox>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:gravity="center"
+                android:text=" Supervised person "
+                android:textSize="@dimen/_14ssp"
+                android:textColor="@color/primary_text">
+            </TextView>
+
+            <CheckBox
+                android:id="@+id/checkBoxSupervised"
+                android:layout_width="wrap_content"
+                android:layout_height="@dimen/_40sdp"
+                android:layout_marginLeft="@dimen/_5sdp">
+            </CheckBox>
+
+         </LinearLayout>
+
+         <androidx.constraintlayout.widget.ConstraintLayout
+             android:id="@+id/generalInformations"
+             android:layout_width="match_parent"
+             android:layout_height="wrap_content"
+             app:layout_constraintTop_toBottomOf="@id/roleLayout">
+
+            <TextView
+                android:id="@+id/generalInformationsTitle"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:text="General Information"
+                android:textColor="@color/primary_text"
+                android:textSize="@dimen/_20sdp"
+                app:layout_constraintTop_toTopOf="parent">
+            </TextView>
+
+            <LinearLayout
+                android:id="@+id/generalInformationsContent"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                app:layout_constraintTop_toBottomOf="@id/generalInformationsTitle">
+
+               <LinearLayout
+                   android:layout_width="match_parent"
+                   android:layout_height="wrap_content"
+                  android:orientation="horizontal">
+
+                  <TextView
+                      android:layout_width="@dimen/_80sdp"
+                      android:layout_height="wrap_content"
+                      android:text="Gender "
+                      android:gravity="right"
+                      android:textColor="@color/primary_text"
+                      android:textSize="@dimen/_12ssp">
+                  </TextView>
+
+                  <CheckBox
+                      android:id="@+id/checkboxMale"
+                      android:layout_width="@dimen/_20sdp"
+                      android:layout_height="@dimen/_15sdp"
+                     android:layout_marginLeft="@dimen/_8sdp">
+                  </CheckBox>
+
+                  <TextView
+                      android:layout_width="wrap_content"
+                      android:layout_height="wrap_content"
+                      android:text="male"
+                      android:gravity="right"
+                      android:textColor="@color/primary_text"
+                      android:textSize="@dimen/_8ssp"
+                      android:layout_marginLeft="@dimen/_10sdp">
+                  </TextView>
+
+                  <CheckBox
+                      android:id="@+id/checkboxFemale"
+                      android:layout_width="@dimen/_20sdp"
+                      android:layout_height="@dimen/_15sdp"
+                      android:layout_marginLeft="@dimen/_8sdp">
+                  </CheckBox>
+
+                  <TextView
+                      android:layout_width="wrap_content"
+                      android:layout_height="wrap_content"
+                      android:text="female"
+                      android:gravity="right"
+                      android:textColor="@color/primary_text"
+                      android:textSize="@dimen/_8ssp"
+                      android:layout_marginLeft="@dimen/_10sdp">
+                  </TextView>
+
+                  <CheckBox
+                      android:id="@+id/checkBoxOther"
+                      android:layout_width="@dimen/_20sdp"
+                      android:layout_height="@dimen/_15sdp"
+                      android:layout_marginLeft="@dimen/_8sdp">
+                  </CheckBox>
+
+                  <TextView
+                      android:layout_width="wrap_content"
+                      android:layout_height="wrap_content"
+                      android:text="other"
+                      android:gravity="right"
+                      android:textColor="@color/primary_text"
+                      android:textSize="@dimen/_8ssp"
+                      android:layout_marginLeft="@dimen/_10sdp">
+                  </TextView>
+
+               </LinearLayout>
+
+               <LinearLayout
+                   android:layout_width="match_parent"
+                   android:layout_height="wrap_content"
+                   android:orientation="horizontal">
+
+                  <TextView
+                      android:layout_width="@dimen/_80sdp"
+                      android:layout_height="wrap_content"
+                      android:text="Lastname "
+                      android:gravity="right"
+                      android:textColor="@color/primary_text"
+                      android:textSize="@dimen/_12ssp">
+                  </TextView>
+
+                  <EditText
+                      android:id="@+id/editLastname"
+                      android:layout_width="@dimen/_80sdp"
+                      android:layout_height="wrap_content"
+                      android:background="@drawable/background_input"
+                      android:hint="Lastname"
+                      android:inputType="textEmailAddress"
+                      android:paddingStart="@dimen/_4sdp"
+                      android:paddingEnd="@dimen/_4sdp"
+                      android:textColor="@color/primary_text"
+                      android:textSize="@dimen/_8ssp">
+                  </EditText>
+
+                  <TextView
+                      android:layout_width="wrap_content"
+                      android:layout_height="wrap_content"
+                      android:text="Common name"
+                      android:paddingStart="@dimen/_4sdp"
+                      android:paddingEnd="@dimen/_4sdp"
+                      android:textColor="@color/primary_text"
+                      android:textSize="@dimen/_12ssp">
+                  </TextView>
+
+                  <EditText
+                      android:id="@+id/editUsename"
+                      android:layout_width="@dimen/_90sdp"
+                      android:layout_height="wrap_content"
+                      android:background="@drawable/background_input"
+                      android:hint="Common name"
+                      android:inputType="textEmailAddress"
+                      android:paddingStart="@dimen/_4sdp"
+                      android:paddingEnd="@dimen/_4sdp"
+                      android:textColor="@color/primary_text"
+                      android:textSize="@dimen/_8ssp">
+                  </EditText>
+               </LinearLayout>
+
+               <LinearLayout
+                   android:layout_width="match_parent"
+                   android:layout_height="wrap_content"
+                   android:orientation="horizontal">
+
+                  <TextView
+                      android:layout_width="@dimen/_80sdp"
+                      android:layout_height="wrap_content"
+                      android:text="Firstname "
+                      android:gravity="right"
+                      android:textColor="@color/primary_text"
+                      android:textSize="@dimen/_12ssp">
+                  </TextView>
+
+                  <EditText
+                      android:id="@+id/editFirstname"
+                      android:layout_width="@dimen/_90sdp"
+                      android:layout_height="wrap_content"
+                      android:background="@drawable/background_input"
+                      android:hint="Firstname"
+                      android:inputType="textEmailAddress"
+                      android:paddingStart="@dimen/_4sdp"
+                      android:paddingEnd="@dimen/_4sdp"
+                      android:textColor="@color/primary_text"
+                      android:textSize="@dimen/_8ssp">
+                  </EditText>
+
+                  <TextView
+                      android:layout_width="wrap_content"
+                      android:layout_height="wrap_content"
+                      android:text="Birth date"
+                      android:paddingStart="@dimen/_4sdp"
+                      android:paddingEnd="@dimen/_4sdp"
+                      android:textColor="@color/primary_text"
+                      android:textSize="@dimen/_12ssp">
+                  </TextView>
+
+                  <EditText
+                      android:id="@+id/editBirthDate"
+                      android:layout_width="@dimen/_90sdp"
+                      android:layout_height="wrap_content"
+                      android:background="@drawable/background_input"
+                      android:hint="DD/MM/YYYY"
+                      android:inputType="textEmailAddress"
+                      android:paddingStart="@dimen/_4sdp"
+                      android:paddingEnd="@dimen/_4sdp"
+                      android:textColor="@color/primary_text"
+                      android:textSize="@dimen/_8ssp">
+                  </EditText>
+               </LinearLayout>
+
+               <LinearLayout
+                   android:layout_width="match_parent"
+                   android:layout_height="wrap_content"
+                   android:orientation="horizontal">
+
+                  <TextView
+                      android:layout_width="@dimen/_80sdp"
+                      android:layout_height="wrap_content"
+                      android:text="Nationality "
+                      android:gravity="right"
+                      android:textColor="@color/primary_text"
+                      android:textSize="@dimen/_12ssp">
+                  </TextView>
+
+                  <CheckBox
+                      android:id="@+id/checkboxNationalityFrench"
+                      android:layout_width="@dimen/_20sdp"
+                      android:layout_height="@dimen/_15sdp"
+                      android:layout_marginLeft="@dimen/_8sdp">
+                  </CheckBox>
+
+                  <TextView
+                      android:layout_width="wrap_content"
+                      android:layout_height="wrap_content"
+                      android:text="French"
+                      android:gravity="right"
+                      android:textColor="@color/primary_text"
+                      android:textSize="@dimen/_8ssp"
+                      android:layout_marginLeft="@dimen/_10sdp">
+                  </TextView>
+
+                  <CheckBox
+                      android:id="@+id/checkboxNationalityOther"
+                      android:layout_width="@dimen/_20sdp"
+                      android:layout_height="@dimen/_15sdp"
+                      android:layout_marginLeft="@dimen/_8sdp">
+                  </CheckBox>
+
+                  <TextView
+                      android:layout_width="wrap_content"
+                      android:layout_height="wrap_content"
+                      android:text="Other :"
+                      android:gravity="right"
+                      android:textColor="@color/primary_text"
+                      android:textSize="@dimen/_8ssp"
+                      android:layout_marginLeft="@dimen/_10sdp">
+                  </TextView>
+
+                  <EditText
+                      android:id="@+id/editNationalityOther"
+                      android:layout_width="@dimen/_90sdp"
+                      android:layout_height="wrap_content"
+                      android:background="@drawable/background_input"
+                      android:hint="Precise other"
+                      android:inputType="textEmailAddress"
+                      android:layout_marginLeft="@dimen/_10sdp"
+                      android:paddingStart="@dimen/_4sdp"
+                      android:paddingEnd="@dimen/_4sdp"
+                      android:textColor="@color/primary_text"
+                      android:textSize="@dimen/_8ssp">
+                  </EditText>
+               </LinearLayout>
+
+               <LinearLayout
+                   android:layout_width="match_parent"
+                   android:layout_height="wrap_content"
+                   android:orientation="horizontal">
+
+                  <TextView
+                      android:layout_width="@dimen/_80sdp"
+                      android:layout_height="wrap_content"
+                      android:text="Birth City "
+                      android:gravity="right"
+                      android:textColor="@color/primary_text"
+                      android:textSize="@dimen/_12ssp">
+                  </TextView>
+
+                  <EditText
+                      android:id="@+id/editBirthCity"
+                      android:layout_width="@dimen/_90sdp"
+                      android:layout_height="wrap_content"
+                      android:background="@drawable/background_input"
+                      android:hint="Birth City"
+                      android:inputType="textEmailAddress"
+                      android:paddingStart="@dimen/_4sdp"
+                      android:paddingEnd="@dimen/_4sdp"
+                      android:textColor="@color/primary_text"
+                      android:textSize="@dimen/_8ssp">
+                  </EditText>
+
+                  <TextView
+                      android:layout_width="wrap_content"
+                      android:layout_height="wrap_content"
+                      android:text="County"
+                      android:paddingStart="@dimen/_4sdp"
+                      android:paddingEnd="@dimen/_4sdp"
+                      android:textColor="@color/primary_text"
+                      android:textSize="@dimen/_12ssp">
+                  </TextView>
+
+                  <EditText
+                      android:id="@+id/editBirthCounty"
+                      android:layout_width="@dimen/_90sdp"
+                      android:layout_height="wrap_content"
+                      android:background="@drawable/background_input"
+                      android:hint="County"
+                      android:inputType="textEmailAddress"
+                      android:paddingStart="@dimen/_4sdp"
+                      android:paddingEnd="@dimen/_4sdp"
+                      android:textColor="@color/primary_text"
+                      android:textSize="@dimen/_8ssp">
+                  </EditText>
+               </LinearLayout>
+
+               <LinearLayout
+                   android:layout_width="match_parent"
+                   android:layout_height="wrap_content"
+                   android:orientation="horizontal">
+
+                  <TextView
+                      android:layout_width="@dimen/_80sdp"
+                      android:layout_height="wrap_content"
+                      android:text="Birth Country "
+                      android:gravity="right"
+                      android:textColor="@color/primary_text"
+                      android:textSize="@dimen/_12ssp">
+                  </TextView>
+
+                  <CheckBox
+                      android:id="@+id/checkboxBirthFrance"
+                      android:layout_width="@dimen/_20sdp"
+                      android:layout_height="@dimen/_15sdp"
+                      android:layout_marginLeft="@dimen/_8sdp">
+                  </CheckBox>
+
+                  <TextView
+                      android:layout_width="wrap_content"
+                      android:layout_height="wrap_content"
+                      android:text="France"
+                      android:gravity="right"
+                      android:textColor="@color/primary_text"
+                      android:textSize="@dimen/_8ssp"
+                      android:layout_marginLeft="@dimen/_10sdp">
+                  </TextView>
+
+                  <CheckBox
+                      android:id="@+id/checkboxBirthOther"
+                      android:layout_width="@dimen/_20sdp"
+                      android:layout_height="@dimen/_15sdp"
+                      android:layout_marginLeft="@dimen/_8sdp">
+                  </CheckBox>
+
+                  <TextView
+                      android:layout_width="wrap_content"
+                      android:layout_height="wrap_content"
+                      android:text="Other :"
+                      android:gravity="right"
+                      android:textColor="@color/primary_text"
+                      android:textSize="@dimen/_8ssp"
+                      android:layout_marginLeft="@dimen/_10sdp">
+                  </TextView>
+
+                  <EditText
+                      android:id="@+id/editBirthOther"
+                      android:layout_width="@dimen/_90sdp"
+                      android:layout_height="wrap_content"
+                      android:background="@drawable/background_input"
+                      android:hint="Precise other"
+                      android:inputType="textEmailAddress"
+                      android:layout_marginLeft="@dimen/_10sdp"
+                      android:paddingStart="@dimen/_4sdp"
+                      android:paddingEnd="@dimen/_4sdp"
+                      android:textColor="@color/primary_text"
+                      android:textSize="@dimen/_8ssp">
+                  </EditText>
+               </LinearLayout>
+            </LinearLayout>
+
+            <TextView
+                android:id="@+id/AdressInformationsTitle"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:text="Adress information"
+                android:textColor="@color/primary_text"
+                android:textSize="@dimen/_20sdp"
+                app:layout_constraintTop_toBottomOf="@+id/generalInformationsContent">
+            </TextView>
+
+            <LinearLayout
+                android:id="@+id/adressInformationsContent"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                app:layout_constraintTop_toBottomOf="@id/AdressInformationsTitle">
+
+               <LinearLayout
+                   android:layout_width="match_parent"
+                   android:layout_height="wrap_content"
+                   android:orientation="horizontal">
+
+                  <TextView
+                      android:layout_width="@dimen/_80sdp"
+                      android:layout_height="wrap_content"
+                      android:gravity="right"
+                      android:text="Full adress "
+                      android:textColor="@color/primary_text"
+                      android:textSize="@dimen/_12ssp">
+
+                  </TextView>
+
+                  <EditText
+                      android:id="@+id/editFullAdress"
+                      android:layout_width="@dimen/_240sdp"
+                      android:layout_height="wrap_content"
+                      android:background="@drawable/background_input"
+                      android:hint="Full adress"
+                      android:inputType="textEmailAddress"
+                      android:paddingStart="@dimen/_4sdp"
+                      android:paddingEnd="@dimen/_4sdp"
+                      android:textColor="@color/primary_text"
+                      android:textSize="@dimen/_8ssp">
+                  </EditText>
+
+               </LinearLayout>
+
+               <LinearLayout
+                   android:layout_width="match_parent"
+                   android:layout_height="wrap_content"
+                   android:orientation="horizontal">
+
+                  <TextView
+                      android:layout_width="@dimen/_80sdp"
+                      android:layout_height="wrap_content"
+                      android:text="Postal code "
+                      android:gravity="right"
+                      android:textColor="@color/primary_text"
+                      android:textSize="@dimen/_12ssp">
+                  </TextView>
+
+                  <EditText
+                      android:id="@+id/editPostalCode"
+                      android:layout_width="@dimen/_35sdp"
+                      android:layout_height="wrap_content"
+                      android:background="@drawable/background_input"
+                      android:hint="XXXXX"
+                      android:inputType="textEmailAddress"
+                      android:paddingStart="@dimen/_4sdp"
+                      android:paddingEnd="@dimen/_4sdp"
+                      android:textColor="@color/primary_text"
+                      android:textSize="@dimen/_8ssp">
+                  </EditText>
+
+                  <TextView
+                      android:layout_width="wrap_content"
+                      android:layout_height="wrap_content"
+                      android:text="City"
+                      android:paddingStart="@dimen/_4sdp"
+                      android:paddingEnd="@dimen/_4sdp"
+                      android:textColor="@color/primary_text"
+                      android:textSize="@dimen/_12ssp">
+                  </TextView>
+
+                  <EditText
+                      android:id="@+id/editCity"
+                      android:layout_width="@dimen/_60sdp"
+                      android:layout_height="wrap_content"
+                      android:background="@drawable/background_input"
+                      android:hint="City"
+                      android:inputType="textEmailAddress"
+                      android:paddingStart="@dimen/_4sdp"
+                      android:paddingEnd="@dimen/_4sdp"
+                      android:textColor="@color/primary_text"
+                      android:textSize="@dimen/_8ssp">
+                  </EditText>
+
+                  <TextView
+                      android:layout_width="wrap_content"
+                      android:layout_height="wrap_content"
+                      android:text="Country"
+                      android:paddingStart="@dimen/_4sdp"
+                      android:paddingEnd="@dimen/_4sdp"
+                      android:textColor="@color/primary_text"
+                      android:textSize="@dimen/_12ssp">
+                  </TextView>
+
+                  <EditText
+                      android:id="@+id/editCountry"
+                      android:layout_width="@dimen/_60sdp"
+                      android:layout_height="wrap_content"
+                      android:background="@drawable/background_input"
+                      android:hint="Country"
+                      android:inputType="textEmailAddress"
+                      android:paddingStart="@dimen/_4sdp"
+                      android:paddingEnd="@dimen/_4sdp"
+                      android:textColor="@color/primary_text"
+                      android:textSize="@dimen/_8ssp">
+                  </EditText>
+
+               </LinearLayout>
+
+               <LinearLayout
+                   android:layout_width="match_parent"
+                   android:layout_height="wrap_content"
+                   android:orientation="horizontal">
+
+                  <TextView
+                      android:layout_width="@dimen/_80sdp"
+                      android:layout_height="wrap_content"
+                      android:text="Phone "
+                      android:gravity="right"
+                      android:textColor="@color/primary_text"
+                      android:textSize="@dimen/_12ssp">
+                  </TextView>
+
+                  <EditText
+                      android:id="@+id/editPhoneNumber"
+                      android:layout_width="@dimen/_90sdp"
+                      android:layout_height="wrap_content"
+                      android:background="@drawable/background_input"
+                      android:hint="Phone number"
+                      android:inputType="textEmailAddress"
+                      android:paddingStart="@dimen/_4sdp"
+                      android:paddingEnd="@dimen/_4sdp"
+                      android:textColor="@color/primary_text"
+                      android:textSize="@dimen/_8ssp">
+                  </EditText>
+
+                  <TextView
+                      android:layout_width="wrap_content"
+                      android:layout_height="wrap_content"
+                      android:text="Mail"
+                      android:paddingStart="@dimen/_4sdp"
+                      android:paddingEnd="@dimen/_4sdp"
+                      android:textColor="@color/primary_text"
+                      android:textSize="@dimen/_12ssp">
+                  </TextView>
+
+                  <EditText
+                      android:id="@+id/editMailAdress"
+                      android:layout_width="@dimen/_110sdp"
+                      android:layout_height="wrap_content"
+                      android:background="@drawable/background_input"
+                      android:hint="Mail adress"
+                      android:inputType="textEmailAddress"
+                      android:paddingStart="@dimen/_4sdp"
+                      android:paddingEnd="@dimen/_4sdp"
+                      android:textColor="@color/primary_text"
+                      android:textSize="@dimen/_8ssp">
+                  </EditText>
+               </LinearLayout>
+
+            </LinearLayout>
+
+            <FrameLayout
+                android:id="@+id/ic_add"
+                android:layout_width="@dimen/_50sdp"
+                android:layout_height="@dimen/_50sdp"
+                app:layout_constraintTop_toBottomOf="@id/adressInformationsContent"
+                app:layout_constraintLeft_toLeftOf="parent"
+                android:layout_marginTop="@dimen/_15sdp"
+                android:layout_marginLeft="@dimen/_130sdp"
+                android:background="@drawable/background_corner_round"
+                android:visibility="visible">
+
+               <androidx.appcompat.widget.AppCompatImageView
+                   android:layout_width="@dimen/_40sdp"
+                   android:layout_height="@dimen/_40sdp"
+                   android:layout_gravity="center"
+                   android:src="@drawable/ic_add">
+               </androidx.appcompat.widget.AppCompatImageView>
+
+            </FrameLayout>
+
+            <FrameLayout
+                android:id="@+id/ic_download"
+                android:layout_width="@dimen/_50sdp"
+                android:layout_height="@dimen/_50sdp"
+                app:layout_constraintTop_toBottomOf="@id/adressInformationsContent"
+                app:layout_constraintLeft_toLeftOf="parent"
+                android:layout_marginTop="@dimen/_15sdp"
+                android:layout_marginLeft="@dimen/_130sdp"
+                android:background="@drawable/background_corner_round"
+                android:visibility="invisible">
+
+               <androidx.appcompat.widget.AppCompatImageView
+                   android:layout_width="@dimen/_40sdp"
+                   android:layout_height="@dimen/_40sdp"
+                   android:layout_gravity="center"
+                   android:src="@drawable/ic_download">
+               </androidx.appcompat.widget.AppCompatImageView>
+
+            </FrameLayout>
+
+            <TextView
+                android:id="@+id/imageText"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:layout_marginTop="@dimen/_5sdp"
+                android:layout_marginLeft="@dimen/_80sdp"
+                app:layout_constraintTop_toBottomOf="@id/ic_add"
+                app:layout_constraintLeft_toLeftOf="parent"
+                android:visibility="visible">
+
+            </TextView>
+
+
+         </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+
+
+
+      </androidx.constraintlayout.widget.ConstraintLayout>
+
+   </ScrollView>
+
+   <FrameLayout
+       android:layout_width="match_parent"
+       android:layout_height="match_parent">
+
+      <FrameLayout
+          android:id="@+id/logout_confirmation"
+          android:layout_width="@dimen/_300sdp"
+          android:layout_height="@dimen/_100sdp"
+          android:layout_gravity="center"
+          android:background="@drawable/background_corner_round"
+          android:visibility="invisible">
+
+         <TextView
+             android:layout_width="match_parent"
+             android:layout_height="match_parent"
+             android:layout_marginTop="@dimen/_10sdp"
+             android:gravity="center_horizontal"
+             android:text="@string/are_you_sure_to_logout"
+             android:textColor="@color/white"
+             android:textSize="@dimen/_22sdp" />
+
+         <com.google.android.material.button.MaterialButton
+             android:id="@+id/logout_yes"
+             android:layout_width="@dimen/_100sdp"
+             android:layout_height="@dimen/_45sdp"
+             android:layout_gravity="bottom"
+             android:layout_marginLeft="@dimen/_30sdp"
+             android:layout_marginBottom="@dimen/_10sdp"
+             android:backgroundTint="@color/white"
+             android:text="@string/yes"
+             android:textColor="@color/primary"
+             android:textSize="@dimen/_20sdp" />
+
+         <com.google.android.material.button.MaterialButton
+             android:id="@+id/logout_no"
+             android:layout_width="@dimen/_100sdp"
+             android:layout_height="@dimen/_45sdp"
+             android:layout_gravity="right"
+             android:layout_marginTop="@dimen/_45sdp"
+             android:layout_marginRight="@dimen/_30sdp"
+             android:backgroundTint="@color/white"
+             android:text="@string/no"
+             android:textColor="@color/primary"
+             android:textSize="@dimen/_20sdp" />
+
+      </FrameLayout>
+
+
+   </FrameLayout>
+
+   <FrameLayout
+       android:id="@+id/ic_saveQr"
+       android:layout_width="@dimen/_50sdp"
+       android:layout_height="@dimen/_50sdp"
+       android:layout_marginLeft="@dimen/_240sdp"
+       android:layout_marginTop="@dimen/_505sdp"
+       android:background="@drawable/background_corner_round"
+       android:visibility="invisible">
+
+      <androidx.appcompat.widget.AppCompatImageView
+          android:layout_width="@dimen/_40sdp"
+          android:layout_height="@dimen/_40sdp"
+          android:layout_gravity="center"
+          android:src="@drawable/ic_save">
+      </androidx.appcompat.widget.AppCompatImageView>
+   </FrameLayout>
+
+   <FrameLayout
+       android:id="@+id/ic_save"
+       android:layout_width="@dimen/_50sdp"
+       android:layout_height="@dimen/_50sdp"
+       android:layout_marginLeft="@dimen/_240sdp"
+       android:layout_marginTop="@dimen/_505sdp"
+       android:background="@drawable/background_corner_round"
+       android:visibility="visible">
+
+      <androidx.appcompat.widget.AppCompatImageView
+          android:layout_width="@dimen/_40sdp"
+          android:layout_height="@dimen/_40sdp"
+          android:layout_gravity="center"
+          android:src="@drawable/ic_save">
+      </androidx.appcompat.widget.AppCompatImageView>
+   </FrameLayout>
+
+   <FrameLayout
+       android:id="@+id/ic_displayQr"
+       android:layout_width="@dimen/_50sdp"
+       android:layout_height="@dimen/_50sdp"
+       android:layout_marginLeft="@dimen/_15sdp"
+       android:layout_marginTop="@dimen/_505sdp"
+       android:background="@drawable/background_corner_round"
+       android:visibility="visible">
+
+      <androidx.appcompat.widget.AppCompatImageView
+          android:layout_width="@dimen/_40sdp"
+          android:layout_height="@dimen/_40sdp"
+          android:layout_gravity="center"
+          android:src="@drawable/ic_displayqr">
+      </androidx.appcompat.widget.AppCompatImageView>
+
+
+
+   </FrameLayout>
+
+
+
+
+
+
+
+
+
+</RelativeLayout>

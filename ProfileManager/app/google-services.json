@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "33636595169",
+    "project_id": "profile-manager-da9b3",
+    "storage_bucket": "profile-manager-da9b3.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:33636595169:android:40600ab5210a297ddf4ea0",
+        "android_client_info": {
+          "package_name": "com.example.profilemanager"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "33636595169-fdhbv2ktctaaoaflime5ajljlm1gjbno.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDCoL6KYiQz5DbpA3KCoCcl4YbsOtST3F4"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "33636595169-fdhbv2ktctaaoaflime5ajljlm1gjbno.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
