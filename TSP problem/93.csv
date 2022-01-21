@@ -1,0 +1,40 @@
+93001,Aubervilliers,3,93027|93055|93066,La Courneuve|Pantin|Saint-Denis,914608|238219
+93005,Aulnay-sous-Bois,6,93078|93071|93046|93057|93010|93007,Villepinte|Sevran|Livry-Gargan|Les Pavillons-sous-Bois|Bondy|Le Blanc-Mesnil,934331|249978
+93006,Bagnolet,3,93063|93048|93045,Romainville|Montreuil|Les Lilas,868820|241736
+93007,Le Blanc-Mesnil,5,93005|93010|93029|93013|93030,Aulnay-sous-Bois|Bondy|Drancy|Le Bourget|Dugny,938548|246314
+93008,Bobigny,6,93029|93010|93053|93063|93055|93027,Drancy|Bondy|Noisy-le-Sec|Romainville|Pantin|La Courneuve,908770|244191
+93010,Bondy,8,93005|93057|93077|93064|93053|93008|93029|93007,Aulnay-sous-Bois|Les Pavillons-sous-Bois|Villemomble|Rosny-sous-Bois|Noisy-le-Sec|Bobigny|Drancy|Le Blanc-Mesnil,900934|248104
+93013,Le Bourget,4,93007|93029|93027|93030,Le Blanc-Mesnil|Drancy|La Courneuve|Dugny,935140|242583
+93014,Clichy-sous-Bois,5,93015|93047|93032|93062|93046,Coubron|Montfermeil|Gagny|Le Raincy|Livry-Gargan,910939|254607
+93015,Coubron,4,93074|93047|93014|93046,Vaujours|Montfermeil|Clichy-sous-Bois|Livry-Gargan,915524|257452
+93027,La Courneuve,8,93030|93013|93029|93008|93055|93001|93066|93072,Dugny|Le Bourget|Drancy|Bobigny|Pantin|Aubervilliers|Saint-Denis|Stains,927727|239732
+93029,Drancy,5,93007|93010|93008|93027|93013,Le Blanc-Mesnil|Bondy|Bobigny|La Courneuve|Le Bourget,921161|243770
+93030,Dugny,4,93007|93013|93027|93072,Le Blanc-Mesnil|Le Bourget|La Courneuve|Stains,949433|241858
+93031,Épinay-sur-Seine,3,93079|93066|93039,Villetaneuse|Saint-Denis|L'Île-Saint-Denis,954322|230557
+93032,Gagny,6,93014|93047|93033|93050|93077|93062,Clichy-sous-Bois|Montfermeil|Gournay-sur-Marne|Neuilly-sur-Marne|Villemomble|Le Raincy,878244|255582
+93033,Gournay-sur-Marne,3,93051|93050|93032,Noisy-le-Grand|Neuilly-sur-Marne|Gagny,861005|257918
+93039,L'Île-Saint-Denis,3,93066|93070|93031,Saint-Denis|Saint-Ouen-sur-Seine|Épinay-sur-Seine,935242|234061
+93045,Les Lilas,4,93063|93006|93061|93055,Romainville|Bagnolet|Le Pré-Saint-Gervais|Pantin,880106|241924
+93046,Livry-Gargan,7,93074|93015|93014|93062|93057|93005|93071,Vaujours|Coubron|Clichy-sous-Bois|Le Raincy|Les Pavillons-sous-Bois|Aulnay-sous-Bois|Sevran,915929|253096
+93047,Montfermeil,3,93015|93032|93014,Coubron|Gagny|Clichy-sous-Bois,899813|256894
+93048,Montreuil,4,93053|93064|93006|93063,Noisy-le-Sec|Rosny-sous-Bois|Bagnolet|Romainville,859393|243932
+93049,Neuilly-Plaisance,4,93050|93051|93064|93077,Neuilly-sur-Marne|Noisy-le-Grand|Rosny-sous-Bois|Villemomble,860871|250601
+93050,Neuilly-sur-Marne,5,93032|93033|93051|93049|93077,Gagny|Gournay-sur-Marne|Noisy-le-Grand|Neuilly-Plaisance|Villemomble,860594|252856
+93051,Noisy-le-Grand,3,93033|93049|93050,Gournay-sur-Marne|Neuilly-Plaisance|Neuilly-sur-Marne,839714|255963
+93053,Noisy-le-Sec,5,93010|93064|93048|93063|93008,Bondy|Rosny-sous-Bois|Montreuil|Romainville|Bobigny,892812|246229
+93055,Pantin,6,93008|93063|93045|93061|93001|93027,Bobigny|Romainville|Les Lilas|Le Pré-Saint-Gervais|Aubervilliers|La Courneuve,897762|240331
+93057,Les Pavillons-sous-Bois,5,93046|93062|93077|93010|93005,Livry-Gargan|Le Raincy|Villemomble|Bondy|Aulnay-sous-Bois,903656|250473
+93059,Pierrefitte-sur-Seine,3,93072|93066|93079,Stains|Saint-Denis|Villetaneuse,960227|236133
+93061,Le Pré-Saint-Gervais,2,93055|93045,Pantin|Les Lilas,885448|240394
+93062,Le Raincy,5,93046|93014|93032|93077|93057,Livry-Gargan|Clichy-sous-Bois|Gagny|Villemomble|Les Pavillons-sous-Bois,894897|251563
+93063,Romainville,6,93008|93053|93048|93006|93045|93055,Bobigny|Noisy-le-Sec|Montreuil|Bagnolet|Les Lilas|Pantin,884656|243689
+93064,Rosny-sous-Bois,5,93077|93049|93048|93053|93010,Villemomble|Neuilly-Plaisance|Montreuil|Noisy-le-Sec|Bondy,875214|247925
+93066,Saint-Denis,8,93059|93072|93027|93001|93070|93039|93031|93079,Pierrefitte-sur-Seine|Stains|La Courneuve|Aubervilliers|Saint-Ouen-sur-Seine|L'Île-Saint-Denis|Épinay-sur-Seine|Villetaneuse,935773|235802
+93070,Saint-Ouen-sur-Seine,2,93066|93039,Saint-Denis|L'Île-Saint-Denis,908900|233565
+93071,Sevran,4,93078|93074|93046|93005,Villepinte|Vaujours|Livry-Gargan|Aulnay-sous-Bois,940100|252863
+93072,Stains,4,93030|93027|93066|93059,Dugny|La Courneuve|Saint-Denis|Pierrefitte-sur-Seine,957707|238010
+93073,Tremblay-en-France,2,93074|93078,Vaujours|Villepinte,966574|256256
+93074,Vaujours,5,93015|93046|93071|93078|93073,Coubron|Livry-Gargan|Sevran|Villepinte|Tremblay-en-France,933752|256924
+93077,Villemomble,7,93062|93032|93050|93049|93064|93010|93057,Le Raincy|Gagny|Neuilly-sur-Marne|Neuilly-Plaisance|Rosny-sous-Bois|Bondy|Les Pavillons-sous-Bois,894677|249962
+93078,Villepinte,4,93073|93074|93071|93005,Tremblay-en-France|Vaujours|Sevran|Aulnay-sous-Bois,957596|254434
+93079,Villetaneuse,3,93059|93066|93031,Pierrefitte-sur-Seine|Saint-Denis|Épinay-sur-Seine,965234|234530
